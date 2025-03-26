@@ -1,0 +1,40 @@
+{
+  "system": {
+    "name": "Flexible Connection System",
+    "description": "A system with multiple degrees of freedom and flexible connections",
+    "DoFs": [
+      {
+        "id": 1,
+        "mass": 1,
+        "encoder_resolution": 4096,
+        "motor_constant": 0.1,
+        "connections": [
+          {
+            "type": "ground",
+            "stiffness": 1000,
+            "damping": 0.05
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "mass": 2.0,
+        "encoder_resolution": 4096,
+        "motor_constant": 0.12,
+        "connections": [
+          {
+            "type": "ground",
+            "stiffness": 500,
+            "damping": 0.02
+          },
+          {
+            "type": "DoF",
+            "id": 1,
+            "stiffness": 50,
+            "damping": 0.01
+          }
+        ]
+      }
+    ]
+  }
+}

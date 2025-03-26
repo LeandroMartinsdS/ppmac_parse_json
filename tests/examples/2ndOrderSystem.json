@@ -1,0 +1,33 @@
+{
+  "name": "Flexible Connection System",
+  "description": "A Mass-Spring-Damper system with multiple degrees-of-freedom",
+  "type": "MSD",
+  "DoFs": [
+    {
+      "id": 1,
+      "mass": 1,
+      "encoder_resolution": 4096,
+      "motor_constant": 0.1
+    },
+    {
+      "id": 2,
+      "mass": 2.0,
+      "encoder_resolution": 4096,
+      "motor_constant": 0.12
+    }
+  ],
+  "connections": [
+    {
+      "id_source": "ground",
+      "id_dest": "1",
+      "stiffness": 1000,
+      "damping": 0.05
+    },
+    {
+      "id_source": "ground",
+      "id_dest": "2",
+      "stiffness": 2000,
+      "damping": 0.025
+    }
+  ]
+}
